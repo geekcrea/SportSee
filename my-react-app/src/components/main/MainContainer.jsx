@@ -1,4 +1,3 @@
-import React from 'react';
 import SideMenu from './sideMenu/SideMenu';
 import Dashboard from './dashboard/Dashboard';
 

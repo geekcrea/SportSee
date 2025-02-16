@@ -1,4 +1,3 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import DashboardMainGraphs from './DashboardMainGraphs';
 import DashboardSideGraphs from './DashboardSideGraphs';

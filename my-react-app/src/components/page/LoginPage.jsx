@@ -1,4 +1,3 @@
-import React from 'react';
 import LoginMenu from '../login/LoginMenu';
 
 // Hardcoded list of users

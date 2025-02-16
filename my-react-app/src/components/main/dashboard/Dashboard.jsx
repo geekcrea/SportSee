@@ -1,4 +1,3 @@
-import React from 'react';
 import { useParams } from 'react-router-dom';
 import DashboardHeader from './DashboardHeader';
 import DashboardMain from './DashboardMain';
