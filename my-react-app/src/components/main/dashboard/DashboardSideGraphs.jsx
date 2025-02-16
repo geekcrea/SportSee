@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import Card from './Card';
 import { UserDataModel } from '/src/services/userDataModel';
@@ -12,7 +12,9 @@ import Lipides from '/src/assets/icons/cards/lipides.png';
 // Component for displaying the user's key data in the form of cards
 function DashboardSideGraphs({ userId }) {
   const [keyData, setKeyData] = useState(null); // State for storing key data of the user
-  const userDataModel = new UserDataModel(); // Instance of UserDataModel for data fetching
+  
+  // Use useMemo to create a stable instance of userDataModel
+  const userDataModel = useMemo(() => new UserDataModel(), []); // Avoids creating a new instance on every render
 
   // useEffect hook to fetch user data when the component mounts or userId changes
   useEffect(() => {
@@ -24,8 +26,8 @@ function DashboardSideGraphs({ userId }) {
     };
   
     fetchData();
-  }, [userId]);
-  
+  }, [userId, userDataModel]); // Add userDataModel to the dependencies array
+
   // Function to determine background color based on category
   const getBackgroundColor = (category) => {
     switch (category) {
