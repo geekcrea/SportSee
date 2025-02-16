@@ -1,0 +1,373 @@
+html {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: center;
+}
+html body {
+  min-width: 1024px;
+  width: 100vw;
+  min-height: 780px;
+  margin: 0;
+}
+
+.error-content {
+  margin-bottom: 110px;
+  text-align: center;
+}
+
+.title404 {
+  font-size: 288px;
+  font-weight: 700;
+  margin: 60px 0;
+}
+@media (max-width: 600px) {
+  .title404 {
+    font-size: 190px;
+  }
+}
+@media (max-width: 400px) {
+  .title404 {
+    font-size: 96px;
+    margin: 60px 0 70px 0;
+  }
+}
+
+.text404 {
+  font-size: 36px;
+  font-weight: 500;
+  margin: 0 10px 120px 10px;
+}
+@media (max-width: 400px) {
+  .text404 {
+    font-size: 18px;
+    margin: 0 10px 90px 10px;
+  }
+}
+
+.link404 {
+  font-size: 18px;
+  font-weight: 500;
+}
+@media (max-width: 400px) {
+  .link404 {
+    font-size: 14px;
+  }
+}
+
+header {
+  background-color: black;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+  display: flex;
+  align-items: center;
+  height: 88px;
+}
+
+.logo {
+  width: 178px;
+  margin: 14px 0 10px 28px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.login-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 10vh;
+}
+
+.login-page h1 {
+  text-align: center;
+}
+
+.user-card {
+  text-align: center;
+}
+.user-card a {
+  text-decoration: none;
+  color: black;
+}
+.user-card a img {
+  height: 128px;
+  width: 128px;
+  border-radius: 50%;
+  object-fit: cover;
+  text-align: center;
+}
+.user-card a p {
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+}
+
+.mainContainer {
+  display: flex;
+}
+
+.card {
+  background-color: #fbfbfb;
+  display: flex;
+  border-radius: 6px;
+  width: 235px;
+}
+@media (max-width: 1280px) {
+  .card {
+    min-width: 235px;
+    width: 48%;
+  }
+}
+.card .imgBackground {
+  width: 60px;
+  height: 60px;
+  opacity: 0.1;
+  position: relative;
+  top: 25px;
+  left: 25px;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+.card img {
+  position: relative;
+  bottom: 13px;
+  left: 45px;
+}
+.card .cardText {
+  position: relative;
+  top: 20px;
+  left: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 45px;
+}
+.card .cardText .data {
+  color: #282d30;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 0px;
+}
+.card .cardText .category {
+  color: #74798c;
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+.dashboardContainer {
+  width: 100%;
+}
+
+.firstBottomGraph {
+  background-color: #ff0000;
+  border-radius: 6px;
+  flex: 1;
+  flex-basis: 30%;
+}
+
+.secondBottomGraph {
+  background-color: #282d30;
+  border-radius: 6px;
+  flex: 1;
+  flex-basis: 30%;
+}
+
+.sideDashboard {
+  background-color: white;
+  margin-top: 73px;
+  margin-left: 30px;
+  margin-right: clamp(0px, 5%, 70px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 20%;
+  margin-bottom: 20px;
+}
+@media (max-width: 1280px) {
+  .sideDashboard {
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 15px;
+    width: 95%;
+    margin-left: 30px;
+    margin-top: 0px;
+    column-gap: 3%;
+  }
+}
+
+.thirdBottomGraph {
+  background-color: #fbfbfb;
+  border-radius: 6px;
+  flex: 1;
+  flex-basis: 30%;
+}
+.thirdBottomGraph h2 {
+  font-size: 15px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+.dashboardHeader {
+  margin-top: 40px;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: clamp(15px, 5%, 70px);
+}
+@media (max-width: 1280px) {
+  .dashboardHeader {
+    margin-top: 0px;
+    margin-left: 30px;
+  }
+}
+.dashboardHeader h1 {
+  color: black;
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+.dashboardHeader .firstName {
+  color: #ff0101;
+}
+.dashboardHeader h2 {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.dashboardMain {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1440px;
+}
+@media (max-width: 1280px) {
+  .dashboardMain {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.mainGraphs {
+  margin-left: clamp(15px, 5%, 70px);
+  margin-top: 60px;
+  width: 80%;
+}
+@media (max-width: 1280px) {
+  .mainGraphs {
+    margin-left: 30px;
+    margin-top: 0px;
+    width: 95%;
+    margin-right: 30px;
+  }
+}
+
+.bottomGraphs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 3%;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  height: 263px;
+}
+
+.topGraph {
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.0196078431);
+  background-color: #fbfbfb;
+  border-radius: 6px;
+  height: 320px;
+}
+.topGraph h2 {
+  font-size: 15px;
+  font-weight: 700;
+  padding: 20px 0 0 20px;
+}
+.topGraph .recharts-wrapper {
+  position: absolute;
+  top: 55px;
+}
+.topGraph .recharts-yAxis {
+  width: 100%;
+  height: 110%;
+}
+.topGraph .recharts-default-legend {
+  bottom: 70px;
+  position: absolute;
+  right: 5px;
+}
+.topGraph .recharts-default-legend .recharts-legend-item {
+  margin-left: 30px !important;
+}
+.topGraph .recharts-default-legend .recharts-legend-item svg {
+  margin-right: 10px !important;
+}
+.topGraph .recharts-legend-item-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #74798c !important;
+}
+.topGraph .topGraphTooltip {
+  color: white;
+  background-color: #e60000;
+  text-align: center;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: 500;
+}
+.topGraph .topGraphTooltip .topTooltip {
+  margin-bottom: 40px;
+}
+
+.mainContainer aside p {
+  color: white;
+  position: relative;
+  top: 85%;
+  rotate: 270deg;
+  width: 182px;
+  margin: 0;
+  padding: 0;
+}
+
+aside .iconGroup {
+  position: absolute;
+  top: 30%;
+  display: flex;
+  flex-direction: column;
+}
+aside .iconGroup button {
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  text-align: inherit;
+  font: inherit;
+  border-radius: 0;
+  appearance: none;
+}
+aside .iconGroup .iconButton {
+  padding: 12px;
+  border-radius: 6px;
+  background-color: white;
+  margin-bottom: 30px;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  width: 117px;
+  background-color: black;
+  text-align: center;
+  align-items: center;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,28 @@
+.dashboardHeader {
+  margin-top: 40px;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: clamp(15px, 5%, 70px);
+
+  @media (max-width: 1280px) {
+    margin-top: 0px;
+    margin-left: 30px;
+  }
+
+  h1 {
+    color: black;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 25px;
+  }
+
+  .firstName {
+    color: #FF0101;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: 400;
+  }
+}
+

@@ -1,5 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
-
+import HomePage from './page/HomePage';
+import LoginPage from './page/LoginPage';
+import Error404 from './page/Error404';
 
 // AppRouter component: Manages the routing of the application
 function AppRouter() {

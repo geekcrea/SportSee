@@ -1,0 +1,39 @@
+.error-content {
+  margin-bottom: 110px;
+  text-align: center;
+}
+
+.title404 {
+  font-size: 288px;
+  font-weight: 700;
+  margin: 60px 0;
+
+  @media (max-width: 600px) {
+    font-size: 190px;
+  }
+
+  @media (max-width: 400px) {
+    font-size: 96px;
+    margin: 60px 0 70px 0;
+  }
+}
+
+.text404 {
+  font-size: 36px;
+  font-weight: 500;
+  margin: 0 10px 120px 10px;
+
+  @media (max-width: 400px) {
+    font-size: 18px;
+    margin: 0 10px 90px 10px;
+  }
+}
+
+.link404 {
+  font-size: 18px;
+  font-weight: 500;
+
+  @media (max-width: 400px) {
+    font-size: 14px;
+  }
+}
