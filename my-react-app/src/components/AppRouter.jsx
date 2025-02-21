@@ -3,6 +3,8 @@ import HomePage from './page/HomePage';
 import LoginPage from './page/LoginPage';
 import Error404 from './page/Error404';
 
+console.log("API URL:", import.meta.env.VITE_API_URL);
+
 // AppRouter component: Manages the routing of the application
 function AppRouter() {
   return (

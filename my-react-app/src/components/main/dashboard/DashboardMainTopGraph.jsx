@@ -8,10 +8,11 @@ import { UserDataModel } from '/src/services/userDataModel';
 // Component for displaying the main top graph of the dashboard
 function DashboardMainTopGraph({ userId }) {
   const [userActivity, setUserActivity] = useState([]); // State to store user activity data
-  const userDataModel = new UserDataModel(); // Instance of UserDataModel for fetching data
+  
 
   useEffect(() => {
     const fetchData = async () => {
+      const userDataModel = new UserDataModel(); // Instance of UserDataModel for fetching data
       const userData = await userDataModel.getUserActivity(userId); // Fetching user activity data
       if (userData && userData.data && userData.data.sessions) {
         setUserActivity(userData.data.sessions); // Setting user activity data in state

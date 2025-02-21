@@ -5,11 +5,12 @@ import { UserDataModel } from '/src/services/userDataModel';
 // DashboardHeader component: Displays the header section of the dashboard
 function DashboardHeader({ userId }) {
   const [userInfos, setUserInfos] = useState(null); // State to store user information
-  const userDataModel = new UserDataModel(); // Instance of UserDataModel for data fetching
+  
 
   useEffect(() => {
     const fetchData = async () => { 
       try {
+        const userDataModel = new UserDataModel(); // Instance of UserDataModel for data fetching
         const userData = await userDataModel.getUserInfo(userId); // Fetching user data
 
         if (userData && userData.userInfos) {
