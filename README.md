@@ -1,2 +1,0 @@
-# SportSee
-OC-PROJET12-SPORTSEE
