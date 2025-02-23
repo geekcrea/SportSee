@@ -1,5 +1,9 @@
 # Project 12 - Develop an Analytics Dashboard with React
 
+## 📸 Preview
+
+![SportSee Dashboard](src/assets/dashboard-preview.png)
+
 ## 🔗 Live Demo
 
 [SportSee Dashboard](https://sportsee-eta-five.vercel.app/)
