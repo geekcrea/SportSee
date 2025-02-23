@@ -5,10 +5,10 @@ import Copyright from "./Copyright";
 function SideMenu() {
   return (
     <>
-    <aside>
-      <Icons />
-      <Copyright />
-    </aside>
+      <aside>
+        <Icons />
+        <Copyright />
+      </aside>
     </>
   );
 }

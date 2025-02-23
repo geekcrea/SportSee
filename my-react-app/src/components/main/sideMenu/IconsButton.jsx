@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 // IconsButton component: Renders a button with an icon image
 function IconsButton(props) {
@@ -6,7 +6,8 @@ function IconsButton(props) {
 
   return (
     <button className="iconButton">
-      <img src={icon} alt={alt} /> {/* Image element for the icon with alt text for accessibility */}
+      <img src={icon} alt={alt} />{" "}
+      {/* Image element for the icon with alt text for accessibility */}
     </button>
   );
 }

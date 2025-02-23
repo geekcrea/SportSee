@@ -11,22 +11,10 @@ function Icons() {
   return (
     <>
       <div className="iconGroup">
-        <IconButton
-          icon={YogaIcon}
-          alt="Icone yoga"
-        />
-        <IconButton
-          icon={SwimIcon}
-          alt="Icone natation"
-        />
-        <IconButton
-          icon={BikeIcon}
-          alt="Icone vélo"
-        />
-        <IconButton
-          icon={FitnessIcon}
-          alt="Icone fitness"
-        />
+        <IconButton icon={YogaIcon} alt="Icone yoga" />
+        <IconButton icon={SwimIcon} alt="Icone natation" />
+        <IconButton icon={BikeIcon} alt="Icone vélo" />
+        <IconButton icon={FitnessIcon} alt="Icone fitness" />
       </div>
     </>
   );

@@ -1,4 +1,4 @@
-import mockData from '/src/services/mockData.json';
+import mockData from "/src/services/mockData.json";
 
 export class MockDataService {
   // Method to get basic user data from mock data
@@ -6,7 +6,7 @@ export class MockDataService {
     if (mockData[userId]) {
       return mockData[userId].userInfo; // Returning the user info if found
     } else {
-      throw new Error('Error while retrieving user data from API'); // Error if user not found
+      throw new Error("Error while retrieving user data from API"); // Error if user not found
     }
   }
 
@@ -17,7 +17,7 @@ export class MockDataService {
       return { data: mockData[userId].userActivity };
     } else {
       throw new Error(
-        "Error while retrieving user's activity data from API", // Error if activity data not found
+        "Error while retrieving user's activity data from API" // Error if activity data not found
       );
     }
   }
@@ -33,7 +33,7 @@ export class MockDataService {
       return { data: { sessions: mockData[userId].averageSessions.sessions } };
     } else {
       throw new Error(
-        'Error while retrieving user average sessions from API', // Error if session data not found
+        "Error while retrieving user average sessions from API" // Error if session data not found
       );
     }
   }
@@ -45,7 +45,7 @@ export class MockDataService {
       return { data: mockData[userId].performance };
     } else {
       throw new Error(
-        'Error while retrieving user performance from API', // Error if performance data not found
+        "Error while retrieving user performance from API" // Error if performance data not found
       );
     }
   }
