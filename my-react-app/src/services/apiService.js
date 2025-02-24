@@ -1,58 +1,54 @@
 import axios from "axios";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const API_BASE_URL = import.meta.env.VITE_API_URL;
 
 export class ApiDataService {
-  // Method to get basic user data
+  // Méthode pour gérer les erreurs et afficher une notification
+  handleApiError(error, message) {
+    console.error(message, error);
+    toast.error("🚨 Erreur : Impossible de charger les données !");
+    throw error; // Rethrow pour que l'appelant puisse gérer l'erreur si nécessaire
+  }
+
+  // Récupérer les données utilisateur
   async getUserData(userId) {
     try {
       const response = await axios.get(`${API_BASE_URL}/user/${userId}`);
-      return response.data.data; // Returning the user data
+      return response.data.data;
     } catch (error) {
-      console.error("Error while retrieving user data from API", error);
-      throw error; // Rethrowing error for caller to handle
+      this.handleApiError(error, "Erreur lors de la récupération des données utilisateur");
     }
   }
 
-  // Method to get user activity data
+  // Récupérer l'activité utilisateur
   async getUserActivity(userId) {
     try {
-      const response = await axios.get(
-        `${API_BASE_URL}/user/${userId}/activity`
-      );
-      return response.data; // Returning the activity data
+      const response = await axios.get(`${API_BASE_URL}/user/${userId}/activity`);
+      return response.data;
     } catch (error) {
-      console.error("Error while retrieving activity data from API", error);
-      throw error; // Rethrowing error for caller to handle
+      this.handleApiError(error, "Erreur lors de la récupération de l'activité utilisateur");
     }
   }
 
-  // Method to get user average session data
+  // Récupérer les sessions moyennes utilisateur
   async getUserAverageSessions(userId) {
     try {
-      const response = await axios.get(
-        `${API_BASE_URL}/user/${userId}/average-sessions`
-      );
-      return response.data; // Returning the average session data
+      const response = await axios.get(`${API_BASE_URL}/user/${userId}/average-sessions`);
+      return response.data;
     } catch (error) {
-      console.error(
-        "Error while retrieving average session data from API",
-        error
-      );
-      throw error; // Rethrowing error for caller to handle
+      this.handleApiError(error, "Erreur lors de la récupération des sessions moyennes");
     }
   }
 
-  // Method to get user performance data
+  // Récupérer la performance utilisateur
   async getUserPerformance(userId) {
     try {
-      const response = await axios.get(
-        `${API_BASE_URL}/user/${userId}/performance`
-      );
-      return response.data; // Returning the performance data
+      const response = await axios.get(`${API_BASE_URL}/user/${userId}/performance`);
+      return response.data;
     } catch (error) {
-      console.error("Error while retrieving performance data from API", error);
-      throw error; // Rethrowing error for caller to handle
+      this.handleApiError(error, "Erreur lors de la récupération des performances utilisateur");
     }
   }
 }
